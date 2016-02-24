@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="Translate">
+<head>
+	<title>Translate</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+</head>
+<body ng-controller="GTController">
+	
+	<div class="container">
+		
+		<div class="row">
+
+			<div class="col-xs-6 col-xs-offset-4">
+				<h1>Translate This!</h1>
+			</div>
+			<form ng-submit="createTranslation()">
+			<div class="col-xs-7 col-xs-offset-1">
+				<p>What do you want translated?</p>
+				<input class="col-xs-12" placeholder="Where is the closest Waffle House?" ng-model="newTranslation.info"></input>
+			</div>
+			
+			<div class="col-xs-7 col-xs-offset-1">
+				<p>To what language?</p>
+				<input class="col-xs-12" placeholder="en"></input>
+			</div>
+			
+				<input type="submit" class="btn btn-default"/>
+			</form>
+			<ul>
+				<li ng-repeat="words in newTranslation">
+					<p>{{words.info}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="../JS/main.js"></script>
+</body>
+</html>
