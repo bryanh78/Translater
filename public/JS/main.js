@@ -5,11 +5,14 @@ angular.module('Translate')
 		var s = $scope
 		var h = $http
 
-		s.createTranslation = function(){
-			h.post('/api/translation', s.newTranslation).then(function(returnData) {
-				s.newTranslation = returnData.data
+		s.createTranslation = function(newTranslation){
+			h.post('/api/translation', newTranslation)
+				.then(function(returnData) {
+				console.log(returnData)
+				s.words = returnData.data
 			})
 		}
+
 
 	}]);
 

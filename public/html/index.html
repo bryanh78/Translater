@@ -15,7 +15,7 @@
 			<div class="col-xs-6 col-xs-offset-4">
 				<h1>Translate This!</h1>
 			</div>
-			<form ng-submit="createTranslation()">
+			<form ng-submit="createTranslation(newTranslation)">
 			<div class="col-xs-7 col-xs-offset-1">
 				<p>What do you want translated?</p>
 				<input class="col-xs-12" placeholder="Where is the closest Waffle House?" ng-model="newTranslation.info"></input>
@@ -23,14 +23,15 @@
 			
 			<div class="col-xs-7 col-xs-offset-1">
 				<p>To what language?</p>
-				<input class="col-xs-12" placeholder="en"></input>
+				<input class="col-xs-12" placeholder="en" ng-model="newTranslation.language"></input>
 			</div>
 			
 				<input type="submit" class="btn btn-default"/>
 			</form>
+			<button></button>
 			<ul>
-				<li ng-repeat="words in newTranslation">
-					<p>{{words.info}}</p>
+				<li>
+					<p>{{words.translatedText}}</p>
 				</li>
 			</ul>
 		</div>
