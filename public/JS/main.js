@@ -17,13 +17,6 @@ angular.module('Translate')
 	}]);
 
 angular.module('Translate')
-	.controller('QuizController', ['$scope','$http', function($scope,$http){
-		var s = $scope
-
-	
-	}]);
-
-angular.module('Translate')
 	.controller('ProgressController', ['$scope','$http', function($scope,$http){
 		var s = $scope
 

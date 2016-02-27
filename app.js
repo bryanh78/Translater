@@ -20,9 +20,16 @@ var translateCtrl = require('./public/controllers/maincontroller.js')
 
 app.post('/api/translation', translateCtrl.createTranslation)
 
+app.post('/quiztime', function(req, res) {
+	res.redirect('/quiz')
+})
+app.get('/quiz',function(req, res){
+	res.sendFile('quiz.html', {root : './public/html'})
+})
 
+// var quizCtrl = require('./public/controllers/quiz.js')
 
-
+// app.post('/api/quiz', quizCtrl.createQuiz)
 
 
 
